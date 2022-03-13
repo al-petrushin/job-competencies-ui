@@ -1,0 +1,43 @@
+@import "variables";
+@import "layouts/Icons";
+@import "layouts/FontFaces";
+@import "layouts/Grid";
+@import "layouts/Page";
+@import "layouts/Form";
+@import "layouts/Buttons";
+
+*, :after, :before {
+  box-sizing: initial;
+}
+
+body, html {background: $bg; font-size: 13px; font-family: $font; min-height: 100%; height: auto;
+  margin: 0; padding: 0;
+  @media (max-width: $tablet) {font-size: 12px;}
+  @media (max-width: $mobile) {font-size: 11px;}
+}
+
+input, select, textarea, button {outline: none; font-family: $font; font-size: $larger;
+  box-sizing: border-box; border: 0;
+}
+
+/* text */
+p {margin: 0 0 1rem 0; padding: 0;}
+h1, h2, h3, h4 {margin: 0 0 1em 0; font-weight: bold; padding: 0;}
+
+/* links */
+a {text-decoration: none; color: $primary; transition: all 0.6s; cursor: pointer;
+  &:hover {transition: all 0.2s;}
+}
+
+.link {border-bottom: transparent 1px solid;
+  &:hover {border-bottom-color: $primary-hover;}
+}
+
+@keyframes spin {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
